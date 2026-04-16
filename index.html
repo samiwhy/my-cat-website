@@ -132,6 +132,25 @@
         .cta-button:hover {
             background-color: #ff8e8e;
         }
+
+        /* Form styling */
+        #contactForm {
+            max-width: 500px;
+            margin: 1rem auto;
+        }
+
+        #contactForm input,
+        #contactForm textarea {
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        #contactForm button {
+            width: 100%;
+        }
     </style>
 </head>
 <body>
@@ -207,10 +226,11 @@
         <section id="contact">
             <h2>Contact Us</h2>
             <p>Have questions or want to share your cat’s story? Reach out to us!</p>
-            <form style="max-width: 500px; margin: 1rem auto;">
-                <input type="text" placeholder="Your Name" style="width: 100%; padding: 0.8rem; margin-bottom: 1rem; border: 1px solid #ddd; border-radius: 5px;">
-                <input type="email" placeholder="Your Email" style="width: 100%; padding: 0.8rem; margin-bottom: 1rem; border: 1px solid #ddd; border-radius: 5px;">
-                <textarea placeholder="Your Message" style="width: 100%; padding: 0.8rem; margin-bottom: 1rem; border: 1px solid #ddd; border-radius: 5px; height: 100px;"></textarea>
+            <form id="contactForm" action="https://github.com/username/repo-name/issues" method="post" target="_blank">
+                <input type="text" name="title" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <input type="hidden" name="labels" value="message-from-website">
                 <button type="submit" class="cta-button">Send Message</button>
             </form>
         </section>
